@@ -1,0 +1,469 @@
+/******************************************************************************
+ *
+ * Module: Port
+ *
+ * File Name: Port_Cfg.h
+ *
+ * Description: Pre-Compile Configuration Header file for TM4C123GH6PM Microcontroller - Dio Driver
+ *
+ * Author: Mohamed Tarek
+ ******************************************************************************/
+
+#ifndef PORT_CFG_H
+#define PORT_CFG_H
+
+/*
+ * Module Version 1.0.0
+ */
+#define PORT_CFG_SW_MAJOR_VERSION              (1U)
+#define PORT_CFG_SW_MINOR_VERSION              (0U)
+#define PORT_CFG_SW_PATCH_VERSION              (0U)
+
+/*
+ * AUTOSAR Version 4.0.3
+ */
+#define PORT_CFG_AR_RELEASE_MAJOR_VERSION     (4U)
+#define PORT_CFG_AR_RELEASE_MINOR_VERSION     (0U)
+#define PORT_CFG_AR_RELEASE_PATCH_VERSION     (3U)
+
+/* Pre-compile option for Development Error Detect */
+#define PORT_DEV_ERROR_DETECT                (STD_ON)
+
+/* Pre-compile option for Version Info API */
+#define PORT_VERSION_INFO_API                (STD_ON)
+
+/* Number of comfigured pins*/
+#define PORT_CONFIGURED_PINS                 (48U)
+
+/*No. OF CHANNELS FOR PORT */
+#define NUMBER_OF_CHANNELS_PER_PORT             8
+
+// Min. & Max. pin number
+#define MIN_PIN_NUM                          0
+#define MAX_PIN_NUM                          47
+
+
+/**********************************************************************
+ *                     Configured Port ID's                           *
+ **********************************************************************/
+#define PORT_A_ID                           (Port_IDType)0 /* PORTA */
+#define PORT_B_ID                           (Port_IDType)1 /* PORTB */
+#define PORT_C_ID                           (Port_IDType)2 /* PORTC */
+#define PORT_D_ID                           (Port_IDType)3 /* PORTD */
+#define PORT_E_ID                           (Port_IDType)4 /* PORTE */
+#define PORT_F_ID                           (Port_IDType)5 /* PORTF */ //SW1 BUTTON PORT //LED1 PORT
+
+/********************************************************************
+ *                      GPIO pin numbers                            *
+ ********************************************************************/
+#define PORT_PIN_NO_0                (Port_PinType)0
+#define PORT_PIN_NO_1                (Port_PinType)1 //LED1 PIN
+#define PORT_PIN_NO_2                (Port_PinType)2
+#define PORT_PIN_NO_3                (Port_PinType)3
+#define PORT_PIN_NO_4                (Port_PinType)4 //SW1 BUTTON PIN IN PORTF
+#define PORT_PIN_NO_5                (Port_PinType)5
+#define PORT_PIN_NO_6                (Port_PinType)6
+#define PORT_PIN_NO_7                (Port_PinType)7
+
+/* Configured Channel ID's */
+#define PORT_A_PIN_0                        (Port_PinType)0
+#define PORT_A_PIN_1                        (Port_PinType)1
+#define PORT_A_PIN_2                        (Port_PinType)2
+#define PORT_A_PIN_3                        (Port_PinType)3
+#define PORT_A_PIN_4                        (Port_PinType)4
+#define PORT_A_PIN_5                        (Port_PinType)5
+#define PORT_A_PIN_6                        (Port_PinType)6
+#define PORT_A_PIN_7                        (Port_PinType)7
+
+#define PORT_B_PIN_0                        (Port_PinType)8
+#define PORT_B_PIN_1                        (Port_PinType)9
+#define PORT_B_PIN_2                        (Port_PinType)10
+#define PORT_B_PIN_3                        (Port_PinType)11
+#define PORT_B_PIN_4                        (Port_PinType)12
+#define PORT_B_PIN_5                        (Port_PinType)13
+#define PORT_B_PIN_6                        (Port_PinType)14
+#define PORT_B_PIN_7                        (Port_PinType)15
+
+#define PORT_C_PIN_0                        (Port_PinType)16
+#define PORT_C_PIN_1                        (Port_PinType)17
+#define PORT_C_PIN_2                        (Port_PinType)18
+#define PORT_C_PIN_3                        (Port_PinType)19
+#define PORT_C_PIN_4                        (Port_PinType)20
+#define PORT_C_PIN_5                        (Port_PinType)21
+#define PORT_C_PIN_6                        (Port_PinType)22
+#define PORT_C_PIN_7                        (Port_PinType)23
+
+#define PORT_D_PIN_0                        (Port_PinType)24
+#define PORT_D_PIN_1                        (Port_PinType)25
+#define PORT_D_PIN_2                        (Port_PinType)26
+#define PORT_D_PIN_3                        (Port_PinType)27
+#define PORT_D_PIN_4                        (Port_PinType)28
+#define PORT_D_PIN_5                        (Port_PinType)29
+#define PORT_D_PIN_6                        (Port_PinType)30
+#define PORT_D_PIN_7                        (Port_PinType)31
+
+#define PORT_E_PIN_0                        (Port_PinType)32
+#define PORT_E_PIN_1                        (Port_PinType)33
+#define PORT_E_PIN_2                        (Port_PinType)34
+#define PORT_E_PIN_3                        (Port_PinType)35
+#define PORT_E_PIN_4                        (Port_PinType)36
+#define PORT_E_PIN_5                        (Port_PinType)37
+#define PORT_E_PIN_6                        (Port_PinType)38
+#define PORT_E_PIN_7                        (Port_PinType)39
+
+#define PORT_F_PIN_0                        (Port_PinType)40
+#define PORT_F_PIN_1                        (Port_PinType)41
+#define PORT_F_PIN_2                        (Port_PinType)42
+#define PORT_F_PIN_3                        (Port_PinType)43
+#define PORT_F_PIN_4                        (Port_PinType)44
+#define PORT_F_PIN_5                        (Port_PinType)45
+#define PORT_F_PIN_6                        (Port_PinType)46
+#define PORT_F_PIN_7                        (Port_PinType)47
+
+/*********************************************************************
+ *                        Pin direction                              *
+ *********************************************************************/
+#define PORT_A_PIN_0_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_A_PIN_1_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_A_PIN_2_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_A_PIN_3_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_A_PIN_4_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_A_PIN_5_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_A_PIN_6_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_A_PIN_7_DIR            (Port_PinDirectionType)PORT_PIN_IN
+
+#define PORT_B_PIN_0_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_B_PIN_1_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_B_PIN_2_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_B_PIN_3_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_B_PIN_4_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_B_PIN_5_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_B_PIN_6_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_B_PIN_7_DIR            (Port_PinDirectionType)PORT_PIN_IN
+
+#define PORT_C_PIN_0_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_C_PIN_1_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_C_PIN_2_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_C_PIN_3_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_C_PIN_4_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_C_PIN_5_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_C_PIN_6_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_C_PIN_7_DIR            (Port_PinDirectionType)PORT_PIN_IN
+
+#define PORT_D_PIN_0_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_D_PIN_1_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_D_PIN_2_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_D_PIN_3_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_D_PIN_4_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_D_PIN_5_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_D_PIN_6_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_D_PIN_7_DIR            (Port_PinDirectionType)PORT_PIN_IN
+
+#define PORT_E_PIN_0_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_E_PIN_1_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_E_PIN_2_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_E_PIN_3_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_E_PIN_4_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_E_PIN_5_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_E_PIN_6_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_E_PIN_7_DIR            (Port_PinDirectionType)PORT_PIN_IN
+
+#define PORT_F_PIN_0_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_F_PIN_1_DIR            (Port_PinDirectionType)PORT_PIN_OUT //LED1
+#define PORT_F_PIN_2_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_F_PIN_3_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_F_PIN_4_DIR            (Port_PinDirectionType)PORT_PIN_IN  //SW1 
+#define PORT_F_PIN_5_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_F_PIN_6_DIR            (Port_PinDirectionType)PORT_PIN_IN
+#define PORT_F_PIN_7_DIR            (Port_PinDirectionType)PORT_PIN_IN
+
+/*********************************************************************
+ *              CONFIGURED INTERNAL RESISTANCE                       *
+ *********************************************************************/
+
+#define PORT_A_PIN_0_RES            (Port_InternalResistor)PULL_UP
+#define PORT_A_PIN_1_RES            (Port_InternalResistor)PULL_UP
+#define PORT_A_PIN_2_RES            (Port_InternalResistor)PULL_UP
+#define PORT_A_PIN_3_RES            (Port_InternalResistor)PULL_UP
+#define PORT_A_PIN_4_RES            (Port_InternalResistor)PULL_UP
+#define PORT_A_PIN_5_RES            (Port_InternalResistor)PULL_UP
+#define PORT_A_PIN_6_RES            (Port_InternalResistor)PULL_UP
+#define PORT_A_PIN_7_RES            (Port_InternalResistor)PULL_UP
+
+#define PORT_B_PIN_0_RES            (Port_InternalResistor)PULL_UP
+#define PORT_B_PIN_1_RES            (Port_InternalResistor)PULL_UP
+#define PORT_B_PIN_2_RES            (Port_InternalResistor)PULL_UP
+#define PORT_B_PIN_3_RES            (Port_InternalResistor)PULL_UP
+#define PORT_B_PIN_4_RES            (Port_InternalResistor)PULL_UP
+#define PORT_B_PIN_5_RES            (Port_InternalResistor)PULL_UP
+#define PORT_B_PIN_6_RES            (Port_InternalResistor)PULL_UP
+#define PORT_B_PIN_7_RES            (Port_InternalResistor)PULL_UP
+
+#define PORT_C_PIN_0_RES            (Port_InternalResistor)PULL_UP
+#define PORT_C_PIN_1_RES            (Port_InternalResistor)PULL_UP
+#define PORT_C_PIN_2_RES            (Port_InternalResistor)PULL_UP
+#define PORT_C_PIN_3_RES            (Port_InternalResistor)PULL_UP
+#define PORT_C_PIN_4_RES            (Port_InternalResistor)PULL_UP
+#define PORT_C_PIN_5_RES            (Port_InternalResistor)PULL_UP
+#define PORT_C_PIN_6_RES            (Port_InternalResistor)PULL_UP
+#define PORT_C_PIN_7_RES            (Port_InternalResistor)PULL_UP
+
+#define PORT_D_PIN_0_RES            (Port_InternalResistor)PULL_UP
+#define PORT_D_PIN_1_RES            (Port_InternalResistor)PULL_UP
+#define PORT_D_PIN_2_RES            (Port_InternalResistor)PULL_UP
+#define PORT_D_PIN_3_RES            (Port_InternalResistor)PULL_UP
+#define PORT_D_PIN_4_RES            (Port_InternalResistor)PULL_UP
+#define PORT_D_PIN_5_RES            (Port_InternalResistor)PULL_UP
+#define PORT_D_PIN_6_RES            (Port_InternalResistor)PULL_UP
+#define PORT_D_PIN_7_RES            (Port_InternalResistor)PULL_UP
+
+#define PORT_E_PIN_0_RES            (Port_InternalResistor)PULL_UP
+#define PORT_E_PIN_1_RES            (Port_InternalResistor)PULL_UP
+#define PORT_E_PIN_2_RES            (Port_InternalResistor)PULL_UP
+#define PORT_E_PIN_3_RES            (Port_InternalResistor)PULL_UP
+#define PORT_E_PIN_4_RES            (Port_InternalResistor)PULL_UP
+#define PORT_E_PIN_5_RES            (Port_InternalResistor)PULL_UP
+#define PORT_E_PIN_6_RES            (Port_InternalResistor)PULL_UP
+#define PORT_E_PIN_7_RES            (Port_InternalResistor)PULL_UP
+
+#define PORT_F_PIN_0_RES            (Port_InternalResistor)PULL_UP
+#define PORT_F_PIN_1_RES            (Port_InternalResistor)OFF      //LED1
+#define PORT_F_PIN_2_RES            (Port_InternalResistor)PULL_UP
+#define PORT_F_PIN_3_RES            (Port_InternalResistor)PULL_UP
+#define PORT_F_PIN_4_RES            (Port_InternalResistor)PULL_UP //SW1
+#define PORT_F_PIN_5_RES            (Port_InternalResistor)PULL_UP
+#define PORT_F_PIN_6_RES            (Port_InternalResistor)PULL_UP
+#define PORT_F_PIN_7_RES            (Port_InternalResistor)PULL_UP
+
+/*****************************************************************
+ *             CONFIGURED INITIAL VALUE OF LEVEL                 *
+ *****************************************************************/
+#define PORT_A_PIN_0_LEVEL          STD_LOW
+#define PORT_A_PIN_1_LEVEL          STD_LOW
+#define PORT_A_PIN_2_LEVEL          STD_LOW
+#define PORT_A_PIN_3_LEVEL          STD_LOW
+#define PORT_A_PIN_4_LEVEL          STD_LOW
+#define PORT_A_PIN_5_LEVEL          STD_LOW
+#define PORT_A_PIN_6_LEVEL          STD_LOW
+#define PORT_A_PIN_7_LEVEL          STD_LOW
+
+#define PORT_B_PIN_0_LEVEL          STD_LOW
+#define PORT_B_PIN_1_LEVEL          STD_LOW
+#define PORT_B_PIN_2_LEVEL          STD_LOW
+#define PORT_B_PIN_3_LEVEL          STD_LOW
+#define PORT_B_PIN_4_LEVEL          STD_LOW
+#define PORT_B_PIN_5_LEVEL          STD_LOW
+#define PORT_B_PIN_6_LEVEL          STD_LOW
+#define PORT_B_PIN_7_LEVEL          STD_LOW
+
+#define PORT_C_PIN_0_LEVEL          STD_LOW
+#define PORT_C_PIN_1_LEVEL          STD_LOW
+#define PORT_C_PIN_2_LEVEL          STD_LOW
+#define PORT_C_PIN_3_LEVEL          STD_LOW
+#define PORT_C_PIN_4_LEVEL          STD_LOW
+#define PORT_C_PIN_5_LEVEL          STD_LOW 
+#define PORT_C_PIN_6_LEVEL          STD_LOW
+#define PORT_C_PIN_7_LEVEL          STD_LOW
+
+#define PORT_D_PIN_0_LEVEL          STD_LOW
+#define PORT_D_PIN_1_LEVEL          STD_LOW
+#define PORT_D_PIN_2_LEVEL          STD_LOW 
+#define PORT_D_PIN_3_LEVEL          STD_LOW
+#define PORT_D_PIN_4_LEVEL          STD_LOW
+#define PORT_D_PIN_5_LEVEL          STD_LOW
+#define PORT_D_PIN_6_LEVEL          STD_LOW
+#define PORT_D_PIN_7_LEVEL          STD_LOW
+
+#define PORT_E_PIN_0_LEVEL          STD_LOW
+#define PORT_E_PIN_1_LEVEL          STD_LOW
+#define PORT_E_PIN_2_LEVEL          STD_LOW 
+#define PORT_E_PIN_3_LEVEL          STD_LOW
+#define PORT_E_PIN_4_LEVEL          STD_LOW
+#define PORT_E_PIN_5_LEVEL          STD_LOW
+#define PORT_E_PIN_6_LEVEL          STD_LOW
+#define PORT_E_PIN_7_LEVEL          STD_LOW
+
+#define PORT_F_PIN_0_LEVEL          STD_LOW
+#define PORT_F_PIN_1_LEVEL          STD_LOW //LED1
+#define PORT_F_PIN_2_LEVEL          STD_LOW 
+#define PORT_F_PIN_3_LEVEL          STD_LOW
+#define PORT_F_PIN_4_LEVEL          STD_HIGH //SW1
+#define PORT_F_PIN_5_LEVEL          STD_LOW
+#define PORT_F_PIN_6_LEVEL          STD_LOW
+#define PORT_F_PIN_7_LEVEL          STD_LOW
+
+/*******************************************************
+ *       CONFIGURED DIRECTION CHANGEABLE               *
+ *******************************************************/
+#define PORT_A_PIN_0_DIR_CHANG         STD_ON
+#define PORT_A_PIN_1_DIR_CHANG         STD_ON
+#define PORT_A_PIN_2_DIR_CHANG         STD_ON
+#define PORT_A_PIN_3_DIR_CHANG         STD_ON
+#define PORT_A_PIN_4_DIR_CHANG         STD_ON
+#define PORT_A_PIN_5_DIR_CHANG         STD_ON
+#define PORT_A_PIN_6_DIR_CHANG         STD_ON
+#define PORT_A_PIN_7_DIR_CHANG         STD_ON
+
+#define PORT_B_PIN_0_DIR_CHANG         STD_ON
+#define PORT_B_PIN_1_DIR_CHANG         STD_ON
+#define PORT_B_PIN_2_DIR_CHANG         STD_ON
+#define PORT_B_PIN_3_DIR_CHANG         STD_ON
+#define PORT_B_PIN_4_DIR_CHANG         STD_ON
+#define PORT_B_PIN_5_DIR_CHANG         STD_ON
+#define PORT_B_PIN_6_DIR_CHANG         STD_ON
+#define PORT_B_PIN_7_DIR_CHANG         STD_ON
+
+#define PORT_C_PIN_0_DIR_CHANG         STD_ON
+#define PORT_C_PIN_1_DIR_CHANG         STD_ON
+#define PORT_C_PIN_2_DIR_CHANG         STD_ON
+#define PORT_C_PIN_3_DIR_CHANG         STD_ON
+#define PORT_C_PIN_4_DIR_CHANG         STD_ON
+#define PORT_C_PIN_5_DIR_CHANG         STD_ON 
+#define PORT_C_PIN_6_DIR_CHANG         STD_ON
+#define PORT_C_PIN_7_DIR_CHANG         STD_ON
+
+#define PORT_D_PIN_0_DIR_CHANG         STD_ON
+#define PORT_D_PIN_1_DIR_CHANG         STD_ON
+#define PORT_D_PIN_2_DIR_CHANG         STD_ON 
+#define PORT_D_PIN_3_DIR_CHANG         STD_ON
+#define PORT_D_PIN_4_DIR_CHANG         STD_ON
+#define PORT_D_PIN_5_DIR_CHANG         STD_ON
+#define PORT_D_PIN_6_DIR_CHANG         STD_ON
+#define PORT_D_PIN_7_DIR_CHANG         STD_ON
+
+#define PORT_E_PIN_0_DIR_CHANG         STD_ON
+#define PORT_E_PIN_1_DIR_CHANG         STD_ON
+#define PORT_E_PIN_2_DIR_CHANG         STD_ON
+#define PORT_E_PIN_3_DIR_CHANG         STD_ON
+#define PORT_E_PIN_4_DIR_CHANG         STD_ON
+#define PORT_E_PIN_5_DIR_CHANG         STD_ON 
+#define PORT_E_PIN_6_DIR_CHANG         STD_ON
+#define PORT_E_PIN_7_DIR_CHANG         STD_ON
+
+#define PORT_F_PIN_0_DIR_CHANG         STD_ON
+#define PORT_F_PIN_1_DIR_CHANG         STD_ON
+#define PORT_F_PIN_2_DIR_CHANG         STD_ON 
+#define PORT_F_PIN_3_DIR_CHANG         STD_ON
+#define PORT_F_PIN_4_DIR_CHANG         STD_ON
+#define PORT_F_PIN_5_DIR_CHANG         STD_ON
+#define PORT_F_PIN_6_DIR_CHANG         STD_ON
+#define PORT_F_PIN_7_DIR_CHANG         STD_ON
+
+/*******************************************************
+ *         CONFIGURED MODE CHANGEABLE                  *
+ *******************************************************/
+#define PORT_A_PIN_0_MODE_CHANG         STD_ON
+#define PORT_A_PIN_1_MODE_CHANG         STD_ON
+#define PORT_A_PIN_2_MODE_CHANG         STD_ON
+#define PORT_A_PIN_3_MODE_CHANG         STD_ON
+#define PORT_A_PIN_4_MODE_CHANG         STD_ON
+#define PORT_A_PIN_5_MODE_CHANG         STD_ON
+#define PORT_A_PIN_6_MODE_CHANG         STD_ON
+#define PORT_A_PIN_7_MODE_CHANG         STD_ON
+
+#define PORT_B_PIN_0_MODE_CHANG         STD_ON
+#define PORT_B_PIN_1_MODE_CHANG         STD_ON
+#define PORT_B_PIN_2_MODE_CHANG         STD_ON
+#define PORT_B_PIN_3_MODE_CHANG         STD_ON
+#define PORT_B_PIN_4_MODE_CHANG         STD_ON
+#define PORT_B_PIN_5_MODE_CHANG         STD_ON
+#define PORT_B_PIN_6_MODE_CHANG         STD_ON
+#define PORT_B_PIN_7_MODE_CHANG         STD_ON
+
+#define PORT_C_PIN_0_MODE_CHANG         STD_ON
+#define PORT_C_PIN_1_MODE_CHANG         STD_ON
+#define PORT_C_PIN_2_MODE_CHANG         STD_ON
+#define PORT_C_PIN_3_MODE_CHANG         STD_ON
+#define PORT_C_PIN_4_MODE_CHANG         STD_ON
+#define PORT_C_PIN_5_MODE_CHANG         STD_ON 
+#define PORT_C_PIN_6_MODE_CHANG         STD_ON
+#define PORT_C_PIN_7_MODE_CHANG         STD_ON
+
+#define PORT_D_PIN_0_MODE_CHANG         STD_ON
+#define PORT_D_PIN_1_MODE_CHANG         STD_ON
+#define PORT_D_PIN_2_MODE_CHANG         STD_ON 
+#define PORT_D_PIN_3_MODE_CHANG         STD_ON
+#define PORT_D_PIN_4_MODE_CHANG         STD_ON
+#define PORT_D_PIN_5_MODE_CHANG         STD_ON
+#define PORT_D_PIN_6_MODE_CHANG         STD_ON
+#define PORT_D_PIN_7_MODE_CHANG         STD_ON
+
+#define PORT_E_PIN_0_MODE_CHANG         STD_ON
+#define PORT_E_PIN_1_MODE_CHANG         STD_ON
+#define PORT_E_PIN_2_MODE_CHANG         STD_ON 
+#define PORT_E_PIN_3_MODE_CHANG         STD_ON
+#define PORT_E_PIN_4_MODE_CHANG         STD_ON
+#define PORT_E_PIN_5_MODE_CHANG         STD_ON
+#define PORT_E_PIN_6_MODE_CHANG         STD_ON
+#define PORT_E_PIN_7_MODE_CHANG         STD_ON
+
+#define PORT_F_PIN_0_MODE_CHANG         STD_ON
+#define PORT_F_PIN_1_MODE_CHANG         STD_ON
+#define PORT_F_PIN_2_MODE_CHANG         STD_ON 
+#define PORT_F_PIN_3_MODE_CHANG         STD_ON
+#define PORT_F_PIN_4_MODE_CHANG         STD_ON
+#define PORT_F_PIN_5_MODE_CHANG         STD_ON
+#define PORT_F_PIN_6_MODE_CHANG         STD_ON
+#define PORT_F_PIN_7_MODE_CHANG         STD_ON
+
+
+
+/*******************************************************
+ *         CONFIGURED PIN MODE                         *
+ *******************************************************/
+#define PORT_A_PIN_0_MODE         DIO_MODE
+#define PORT_A_PIN_1_MODE         DIO_MODE
+#define PORT_A_PIN_2_MODE         DIO_MODE
+#define PORT_A_PIN_3_MODE         DIO_MODE
+#define PORT_A_PIN_4_MODE         DIO_MODE
+#define PORT_A_PIN_5_MODE         DIO_MODE
+#define PORT_A_PIN_6_MODE         DIO_MODE
+#define PORT_A_PIN_7_MODE         DIO_MODE
+
+#define PORT_B_PIN_0_MODE         DIO_MODE
+#define PORT_B_PIN_1_MODE         DIO_MODE
+#define PORT_B_PIN_2_MODE         DIO_MODE
+#define PORT_B_PIN_3_MODE         DIO_MODE
+#define PORT_B_PIN_4_MODE         DIO_MODE
+#define PORT_B_PIN_5_MODE         DIO_MODE
+#define PORT_B_PIN_6_MODE         DIO_MODE
+#define PORT_B_PIN_7_MODE         DIO_MODE
+
+#define PORT_C_PIN_0_MODE         DIO_MODE
+#define PORT_C_PIN_1_MODE         DIO_MODE
+#define PORT_C_PIN_2_MODE         DIO_MODE
+#define PORT_C_PIN_3_MODE         DIO_MODE
+#define PORT_C_PIN_4_MODE         DIO_MODE
+#define PORT_C_PIN_5_MODE         DIO_MODE 
+#define PORT_C_PIN_6_MODE         DIO_MODE
+#define PORT_C_PIN_7_MODE         DIO_MODE
+
+#define PORT_D_PIN_0_MODE         DIO_MODE
+#define PORT_D_PIN_1_MODE         DIO_MODE
+#define PORT_D_PIN_2_MODE         DIO_MODE 
+#define PORT_D_PIN_3_MODE         DIO_MODE
+#define PORT_D_PIN_4_MODE         DIO_MODE
+#define PORT_D_PIN_5_MODE         DIO_MODE
+#define PORT_D_PIN_6_MODE         DIO_MODE
+#define PORT_D_PIN_7_MODE         DIO_MODE
+
+#define PORT_E_PIN_0_MODE         DIO_MODE
+#define PORT_E_PIN_1_MODE         DIO_MODE
+#define PORT_E_PIN_2_MODE         DIO_MODE 
+#define PORT_E_PIN_3_MODE         DIO_MODE
+#define PORT_E_PIN_4_MODE         DIO_MODE
+#define PORT_E_PIN_5_MODE         DIO_MODE
+#define PORT_E_PIN_6_MODE         DIO_MODE
+#define PORT_E_PIN_7_MODE         DIO_MODE
+
+#define PORT_F_PIN_0_MODE         DIO_MODE
+#define PORT_F_PIN_1_MODE         DIO_MODE //LED1
+#define PORT_F_PIN_2_MODE         DIO_MODE 
+#define PORT_F_PIN_3_MODE         DIO_MODE
+#define PORT_F_PIN_4_MODE         DIO_MODE //SW1
+#define PORT_F_PIN_5_MODE         DIO_MODE 
+#define PORT_F_PIN_6_MODE         DIO_MODE
+#define PORT_F_PIN_7_MODE         DIO_MODE
+
+
+#endif
